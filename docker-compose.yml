@@ -2,8 +2,8 @@ version: '3.8'
 
 services:
   wordpress:
-    image: wordpress:latest
-    container_name: wordpress
+    image: pchwirot/wordpress-odbiory
+    container_name: wordpress-odbiory
     ports:
       - "${WP_PORT:-8080}:80"
     environment:
@@ -21,8 +21,8 @@ services:
     restart: unless-stopped
 
   mysql:
-    image: mysql:8.0
-    container_name: wordpress-db
+    image: pchwirot/msql-odbiory
+    container_name: msql-odbiory
     ports:
       - "${DB_PORT:-3306}:3306"
     environment:
